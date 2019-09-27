@@ -17,8 +17,10 @@ Sur notre projet il y a 3 branches:
 - Master qui est la branche principale, celle ou la version finale sera rendue.
 - Develop qui est la branche ou l'ensemble de chacunes de nos portions de code.
 - New_Feature (une branche chacun) qui est la branche sur laquelle chacun de nous allons coder.
+
+Par défaut, la branche principale est la Master. Ce n'est pas sur celle ci que l'on code comme expliqué plus haut. Il vous faut donc vous déplacer sur votre branche avec `git checkout -b <nom_branche>` (ici `git checkout -b feature_<votre_nom>`. Cette branche que vous créez vous est propre, c'est a dire que personne n'y a accès j'usqu'a ce qu'elle soit mergé sur Develop. Pour changer de branche on utilise `git checkout <nom_branche>`.
 ## Aide Git
-Pour ne pas foutre en l'air le projet (même si le principe de Git nous assure une certaine sécurité), il faut impérativement vous habituer a suivre la manip suivante.
+Pour ne pas foutre en l'air le projet (même si le principe de Git nous assure une certaine sécurité), il faut impérativement vous habituer a suivre la manip suivante (si vous ne comprenez pas ce que je raconte plus bas voici une doc tres complète: https://rogerdudler.github.io/git-guide/).
 ### Pousser
 Pousser ou Push, c'est envoyer vos fichier **locaux** sur le répertoire de Git **en ligne**. Vous codez tout simplement sur votre machine en local puis une fois votre partie terminée, vous la poussez sur la bonne branche !
 1. On ajoute les fichiers selectionnés (comme si on les ajoutais dans un espace virtuel) avec la commande `git add <nomfichier.php>`ou carrément tout le projet (plus rapide) avec `git add *`.
