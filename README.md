@@ -23,13 +23,15 @@ Par défaut, la branche principale est la Master. Ce n'est pas sur celle ci que 
 ## Aide Git
 Pour ne pas foutre en l'air le projet (même si le principe de Git nous assure une certaine sécurité), il faut impérativement vous habituer a suivre la manip suivante (si vous ne comprenez pas ce que je raconte plus bas voici une doc tres complète: https://rogerdudler.github.io/git-guide/).
 ### Récupérer
+Pour récupérer le projet on se positionne dans un répertoire sur votre pc (la ou vous voulez le mettre en gros) dans le CMD puis on fais `git clone <lien_projet>` puis un `cd <nom_projet>` pour y entrer. Tous les fichiers du projet est téléchargé sur votre pc et vous n'avez plus qu'a commencé a coder !
 
 ### Pousser
-Pousser ou Push, c'est envoyer vos fichier **locaux** sur le répertoire de Git **en ligne**. Vous codez tout simplement sur votre machine en local puis une fois votre partie terminée, vous la poussez sur la bonne branche !
+Pousser ou Push, c'est envoyer vos fichier **locaux** sur le répertoire de Git **en ligne**. Vous codez tout simplement sur votre machine en local puis une fois votre partie terminée ou à l'ajout de nouveaux fichiers, vous la poussez sur votre branche !
 1. On ajoute les fichiers selectionnés (comme si on les ajoutais dans un espace virtuel) avec la commande `git add <nomfichier.php>`ou carrément tout le projet (plus rapide) avec `git add *`.
 A ce moment la, les fichiers que vous avez modifiés ou tout le projet est dans un espace virtuel.
 2. Pour vérifier qu'ils le sont bien on utilise la commande `git status`: un message doit apparaître avec **tous les fichier en vert**.
 3. Si tout est bon, on effectue un commit, c'est à dire qu'on prépare l'envoie sur le répertoire de Git avec la commande `git commit -m "nom_commit"` (on peut refaire un `git status`pour vérifier que tout est bien commité).
-4. Il ne reste plus qu'a les pousser sur le repertoire git avec `git push -u <branche>` (ici vous etes sur votre branche et vous poussez sur Develop).
+4. Il ne reste plus qu'a les pousser sur le repertoire git avec `git push -u <branche>` (ici vous poussez sur votre branche).
 ### Fusionner
-Bon normalement chacun code ses propres parties de sa mission
+Bon normalement chacun code une fonctionnalité faisant partie de sa mission. A chaque fonctionnalité crée, on pousse sur sa branche mais il faut maintenant que le travail de chacun se regroupe ! On utilise le merge, c'est a dire la fusion de 2 branche avec `git merge <nom_branche>`. Une fois la branche Develop complète (projet terminé) on mergera le tout sur Master pour la final release.
+**ATTENTION** Un merge de 2 branche les fusionnes donc attention a ne pas merge n'importe quoi et n'importe quand !
