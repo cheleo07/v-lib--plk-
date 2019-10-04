@@ -3,6 +3,7 @@ projet sio2d "v-lib"
 
 * Accès bdd
 * Screen MEA
+* Charte Graphique
 * Tableau de bord
 * Branches
 * Aide Git
@@ -13,6 +14,9 @@ projet sio2d "v-lib"
 Pour accéder a la base de donnée, se connecter a PHPMyAdmin avec l'identifiant `bodinp` et le mot de passe `bodinp`.
 ## Screen MEA
 Petit screen des familles du MEA si ça peut aider:
+![Screen CG](CharteGraphique.PNG)
+## Charte Graphique
+Petit screen de la charte graphique du projet:
 ![Screen MEA](MEA.PNG)
 ## Tableau de bord
 Pour que l'on s'y prenne bien, j'ai créée 3 'post-it' Mission #1 #2 #3. Cela représente l'intégralité de votre partie. Pour coder vous n'allez pas vous lancer dans l'écriture de votre partie entière mais morceaux par morceaux, composants par composants, qui en les rassemblant tous, constitueront la mission dans son intégralité.
