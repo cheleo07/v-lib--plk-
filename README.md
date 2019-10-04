@@ -16,7 +16,7 @@ Petit screen des familles du MEA si ça peut aider:
 ![Screen MEA](MEA.PNG)
 ## Tableau de bord
 Pour que l'on s'y prenne bien, j'ai créée 3 'post-it' Mission #1 #2 #3. Cela représente l'intégralité de votre partie. Pour coder vous n'allez pas vous lancer dans l'écriture de votre partie entière mais morceaux par morceaux, composants par composants, qui en les rassemblant tous, constitueront la mission dans son intégralité.
-Donc il faudra organiser son travail de son coté et **ne pas oublier de créer des 'post-it'** a chaque fonctionnalité crééese l'assigner et écrire à quelle mission elle appartient.
+Donc il faudra organiser son travail de son coté et **ne pas oublier de créer des 'post-it'** a chaque fonctionnalité créée l'assigner et écrire à quelle mission elle appartient.
 De base un 'post-it' se créée dans To Do (a faire) puis on le déplace dans In Progress (en cours) quand on travail dessus. Si on est bloqué ou on a besoin d'aide on met dans Blocked. Quand c'est finis on met dans Done. Et on recommence avec une autre fonctionnalité...
 ## Branches
 Sur notre projet il y a 3 branches:
