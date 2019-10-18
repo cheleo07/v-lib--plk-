@@ -1,6 +1,4 @@
 <?php
-
-
     class dBConnex extends PDO{
         private static $instance;
         

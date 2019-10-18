@@ -1,5 +1,6 @@
+
 <div class="conteneur">
-	<header>
+<header>
 		<?php include 'haut.php';?>
 		
 	</header>
@@ -7,7 +8,7 @@
 		<div class="droite">
 			<div class="connexion">
 					<?php 
-					   echo $formulaireConnexion->afficherFormulaire();
+					   
 					?>
 			</div>
 		</div>
