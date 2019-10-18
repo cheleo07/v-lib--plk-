@@ -348,16 +348,17 @@ a.anchor {
 	font-weight: bold;
 	text-align: center;
 }
-
+/******************************************/
+/*Boutons*/
+/*****************************************/
 .bouton {
-  background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 80px 60px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 25px;
   margin: 4px 2px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
