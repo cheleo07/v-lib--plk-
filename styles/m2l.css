@@ -349,3 +349,55 @@ a.anchor {
 	text-align: center;
 }
 
+.bouton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.bouton2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA; /*Blue*/
+}
+.bouton2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.bouton3 {
+	  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+} /* Red */ 
+.bouton3:hover {
+  background-color: #f44336;
+  color: white;
+}
+.bouton4 {
+	  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+} /* Black */ 
+.bouton4:hover {
+  background-color: #555555;
+  color: white;
+}
+.bouton1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;} /*Green*/
+.bouton1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
