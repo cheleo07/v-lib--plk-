@@ -6,13 +6,10 @@
 	<main>
 	<div class="texteAccueil">
 	<h1>Abonnements</h1>
-	<input class="bouton bouton1" type="button" value="Pass 24H">
-	<div class="Sous-bouton">
-	<p></p>
-	</div>
-    <input class="bouton bouton2" type="button" value="Pass 7 Jours">
-    <input class="bouton bouton3" type="button" value="Pass Mensuel">
-    <input class="bouton bouton4" type="button" value="Pass Annuel">
+	<button class="bouton bouton1" type="button"><b>Pass 24H </b><br />1.5€</button>
+    <button class="bouton bouton2" type="button"><b>Pass 7 Jours</b><br />7€</button>
+    <button class="bouton bouton3" type="button"><b>Pass Mensuel</b><br />10€</button>
+    <button class="bouton bouton4" type="button"><b>Pass Annuel</b><br />30€</button>
 	</main>
 	</div>
 	<footer>
