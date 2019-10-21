@@ -6,10 +6,22 @@
 	<main>
 	<div class="texteAccueil">
 	<h1>Abonnements</h1>
-	<button class="bouton bouton1" type="button"><b>Pass 24H </b><br />1.5€</button>
-    <button class="bouton bouton2" type="button"><b>Pass 7 Jours</b><br />7€</button>
-    <button class="bouton bouton3" type="button"><b>Pass Mensuel</b><br />10€</button>
-    <button class="bouton bouton4" type="button"><b>Pass Annuel</b><br />30€</button>
+	<form action="" method="post">
+	<button name="d1" class="bouton bouton1" type="submit"><b>Pass 24H </b><br />1.5€</button>
+    <button name="d2" class="bouton bouton2" type="submit"><b>Pass 7 Jours</b><br />7€</button>
+    <button name="d3" class="bouton bouton3" type="submit"><b>Pass Mensuel</b><br />10€</button>
+    <button name="d4" class="bouton bouton4" type="submit"><b>Pass Annuel</b><br />30€</button>
+    </form>
+    <?php 
+    if(isset($_POST['d1']))
+        echo 'd1'; 
+    else if(isset($_POST['d2']))
+        echo 'd2';
+    else if(isset($_POST['d3']))
+        echo 'd3';
+    else if(isset($_POST['d4']))
+        echo 'd4';
+    ?>
 	</main>
 	</div>
 	<footer>
