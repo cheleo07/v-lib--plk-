@@ -89,10 +89,10 @@ class Formulaire{
 		return $composant;
 	}
 	
-	public function creerInputBack($unNom, $unId, $uneValue, $onclick){
-	    $composant = "<input type = 'submit' name = '" . $unNom . "' id = '" . $unId . "' ";
+	public function creerInputBack($unNom, $unId, $onclick, $uneValue){
+	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    if ($onclick = 1){
-	        $composant .="history.back";
+	        $composant .="onClick= 'window.history.back()' ";
 	    }
 	    $composant .= "value = '" . $uneValue . "'/> ";
 	    return $composant;

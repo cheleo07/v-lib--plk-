@@ -30,7 +30,7 @@ $formulaireAbonnement->ajouterComposantTab();
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMdp('codesecret2', 'codesecret2', "" ,"","",0),1);
 $formulaireAbonnement->ajouterComposantTab();
 
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputSubmit('retourAbo', 'retourAbo', 'Retour', 1),2);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputBack('retourAbo', 'retourAbo', 1, 'Retour'),2);
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputSubmit('submitAbo', 'submitAbo', 'Continuer'),2);
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputReset('ResetAbo', 'ResetAbo', 'Annuler'),2);
 $formulaireAbonnement->ajouterComposantTab();

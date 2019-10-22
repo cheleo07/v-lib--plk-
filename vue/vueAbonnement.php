@@ -29,6 +29,10 @@
     else if(isset($_POST['d4'])){
         echo $formulaireAbonnement->afficherFormulaire();
     }
+    
+    if(isset($_POST['submitAbo'])){
+        echo 'hey';
+    }
     ?>
 	</main>
 	</div>
