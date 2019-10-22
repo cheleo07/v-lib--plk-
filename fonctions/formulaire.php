@@ -54,7 +54,6 @@ class Formulaire{
 		return $composant;
 	}
 	
-	
 	public function creerInputMdp($unNom, $unId,  $required , $placeholder , $pattern){
 		$composant = "<input type = 'password' name = '" . $unNom . "' id = '" . $unId . "' ";
 		if (!empty($placeholder)){
@@ -88,6 +87,21 @@ class Formulaire{
 		$composant = "<input type = 'submit' name = '" . $unNom . "' id = '" . $unId . "' ";
 		$composant .= "value = '" . $uneValue . "'/> ";
 		return $composant;
+	}
+	
+	public function creerInputBack($unNom, $unId, $uneValue, $onclick){
+	    $composant = "<input type = 'submit' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    if ($onclick = 1){
+	        $composant .="history.back";
+	    }
+	    $composant .= "value = '" . $uneValue . "'/> ";
+	    return $composant;
+	}
+	
+	public function creerInputReset($unNom, $unId, $uneValue){
+	    $composant = "<input type = 'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    $composant .= "value = '" . $uneValue . "'/> ";
+	    return $composant;
 	}
 
 	public function creerInputImage($unNom, $unId, $uneSource){
