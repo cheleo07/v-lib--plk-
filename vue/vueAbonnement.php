@@ -31,7 +31,7 @@
     }
     
     if(isset($_POST['submitAbo'])){
-        echo 'hey';
+        echo $formulairePayement->afficherFormulaire();;
     }
     ?>
 	</main>
