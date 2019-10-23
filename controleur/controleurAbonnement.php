@@ -38,9 +38,38 @@ $formulaireAbonnement->ajouterComposantTab();
 $formulaireAbonnement->creerFormulaire();
 
 $formulairePayement = new Formulaire('post', 'index.php', 'fPayement', 'fPayement');
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('idCommerce', 'Id commerçant '));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('idCommerce', '05347519603679 '));
+$formulairePayement->ajouterComposantTab();
+
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('refTrans', 'Reference de la transaction '));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('refTrans', '531473 '));
+$formulairePayement->ajouterComposantTab();
+
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('montTrans', 'Montant de la transaction '));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('montTrans', '200€ '));
+$formulairePayement->ajouterComposantTab();
+
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('phraseSecure', 'Les symboles '));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerImage('cad1', 'images/lock.png'));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('phraseSecure2', 'indiquent que votre transaction est sécurisée, vous pouvez remplir votre formulaire en toute confiance. '));
+$formulairePayement->ajouterComposantTab();
+
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('numCarte', 'Numero de carte: '));
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('numCarte', 'numCarte', "", 1, "",0),1);
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('expire', 'Expire fin: '));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('expire', 'expire', "", 1, "",0),1);
 $formulairePayement->ajouterComposantTab();
+
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('controle', 'Numéro de controle au dos de la carte: '));
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('controle', 'controle', "", 1, "",0),1);
+$formulairePayement->ajouterComposantTab();
+
+$formulairePayement->ajouterComposantLigne($formulaireAbonnement-> creerInputPopup('submitPayement', 'submitPayement', 1, 'Valider'),2);
+$formulairePayement->ajouterComposantTab();
+
 $formulairePayement->creerFormulaire();
+
 require_once 'vue/vueAbonnement.php' ;
 require_once 'fonctions/formulaire.php';
+require_once 'fonctions/menu.php';

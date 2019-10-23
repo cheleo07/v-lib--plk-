@@ -2,13 +2,18 @@
 <div class="conteneur">
 <header>
 		<?php include 'haut.php' ;?>
+		<script>
+function popup() {
+  alert("Merci");
+}
+</script>
 	</header>
 	<main>
 	<div class="texteAccueil">
 	<h1>Abonnements</h1>
 	<?php 
-	//si post d'un bouton pas envoyé affiche le menu bouton
-	if(!isset($_POST['d1'])AND !isset($_POST['d2'])AND !isset($_POST['d3'])AND !isset($_POST['d4'])){
+	//tant que pas appuyé sur un bouton et submitAbo le menu s'affiche
+	if(!isset($_POST['d1'])AND !isset($_POST['d2'])AND !isset($_POST['d3'])AND !isset($_POST['d4'])AND !isset($_POST['submitAbo'])){
 	?>
 	<form action="" method="post">
 	<button name="d1" class="bouton bouton1" type="submit"><b>Pass 24H </b><br />1.5€</button>
@@ -18,7 +23,7 @@
     </form>
     <?php
 	}
-	//si non affiche formulaire abonnement
+	//appuyer sur un bouton affiche le formulaire d'abonnement
 	if(isset($_POST['d1'])){
 	    echo $formulaireAbonnement->afficherFormulaire();
 	}
@@ -31,6 +36,7 @@
     else if(isset($_POST['d4'])){
         echo $formulaireAbonnement->afficherFormulaire();
     }
+    //appuyer sur continuer affiche le formulaire de payement
     if(isset($_POST['submitAbo'])){
         echo $formulairePayement->afficherFormulaire();
     }

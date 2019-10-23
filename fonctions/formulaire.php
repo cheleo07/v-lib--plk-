@@ -98,6 +98,15 @@ class Formulaire{
 	    return $composant;
 	}
 	
+	public function creerInputPopup($unNom, $unId, $onclick, $uneValue){
+	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    if ($onclick = 1){
+	        $composant .="onClick= 'popup()' ";
+	    }
+	    $composant .= "value = '" . $uneValue . "'/> ";
+	    return $composant;
+	}
+	
 	public function creerInputReset($unNom, $unId, $uneValue){
 	    $composant = "<input type = 'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    $composant .= "value = '" . $uneValue . "'/> ";
@@ -108,6 +117,12 @@ class Formulaire{
 		$composant = "<input type = 'image' name = '" . $unNom . "' id = '" . $unId . "' ";
 		$composant .= "src = '" . $uneSource . "'/> ";
 		return $composant;
+	}
+	
+	public function creerImage($unId, $uneSource){
+	    $composant = "<img class = '" . $unId . "' ";
+	    $composant .= "src = '" . $uneSource . "'/> ";
+	    return $composant;
 	}
 	
 	
