@@ -7,6 +7,7 @@
 	<div class="texteAccueil">
 	<h1>Abonnements</h1>
 	<?php 
+	//si post d'un bouton pas envoyé affiche le menu bouton
 	if(!isset($_POST['d1'])AND !isset($_POST['d2'])AND !isset($_POST['d3'])AND !isset($_POST['d4'])){
 	?>
 	<form action="" method="post">
@@ -17,6 +18,7 @@
     </form>
     <?php
 	}
+	//si non affiche formulaire abonnement
 	if(isset($_POST['d1'])){
 	    echo $formulaireAbonnement->afficherFormulaire();
 	}
@@ -29,9 +31,8 @@
     else if(isset($_POST['d4'])){
         echo $formulaireAbonnement->afficherFormulaire();
     }
-    
     if(isset($_POST['submitAbo'])){
-        echo $formulairePayement->afficherFormulaire();;
+        echo $formulairePayement->afficherFormulaire();
     }
     ?>
 	</main>

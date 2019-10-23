@@ -40,6 +40,7 @@ $formulaireAbonnement->creerFormulaire();
 $formulairePayement = new Formulaire('post', 'index.php', 'fPayement', 'fPayement');
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('numCarte', 'Numero de carte: '));
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('numCarte', 'numCarte', "", 1, "",0),1);
+$formulairePayement->ajouterComposantTab();
 $formulairePayement->creerFormulaire();
 require_once 'vue/vueAbonnement.php' ;
 require_once 'fonctions/formulaire.php';
