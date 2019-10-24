@@ -9,11 +9,11 @@ $formulaireConnexion = new Formulaire('post', 'index.php', 'fConnexion', 'fConne
 
 if(!isset($_SESSION['identification']) || !$_SESSION['identification']){
     $formulaireConnexion->ajouterComposantLigne($formulaireConnexion->creerLabelFor('codeacces', "Code d'accès :"), 1);
-    $formulaireConnexion->ajouterComposantLigne($formulaireConnexion->creerInputTexte('codeacces', 'codeacces', ""   , 1, "",0),1);
+    $formulaireConnexion->ajouterComposantLigne($formulaireConnexion->creerInputTexte('codeacces', 'codeacces', ""   , "", 1,0),1);
     $formulaireConnexion->ajouterComposantTab();
     
     $formulaireConnexion->ajouterComposantLigne($formulaireConnexion->creerLabelFor('codesecret', 'Code secret :'), 1);
-    $formulaireConnexion->ajouterComposantLigne($formulaireConnexion->creerInputTexte('codesecret', 'codesecret', "" ,1,"",0),1);
+    $formulaireConnexion->ajouterComposantLigne($formulaireConnexion->creerInputMdp('codesecret', 'codesecret', "" ,"",1,0,"",""),1);
     $formulaireConnexion->ajouterComposantTab();
     
     $formulaireConnexion->ajouterComposantLigne($formulaireConnexion-> creerInputSubmit('submitConnex', 'submitConnex', 'Valider'),2);

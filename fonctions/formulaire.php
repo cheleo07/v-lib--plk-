@@ -36,7 +36,7 @@ class Formulaire{
 		return $composant;
 	}
 	
-	public function creerInputTexte($unNom, $unId, $uneValue , $required , $placeholder , $pattern){
+	public function creerInputTexte($unNom, $unId, $uneValue , $placeholder , $required , $pattern){
 		$composant = "<input type = 'text' name = '" . $unNom . "' id = '" . $unId . "' ";
 		if (!empty($uneValue)){
 			$composant .= "value = '" . $uneValue . "' ";
@@ -139,15 +139,28 @@ class Formulaire{
 	    return $composant;
 	}
 	
+	public function creerInputSubmitForce($unNom, $unId, $onclick, $uneValue){
+	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    if ($onclick = 1){
+	        $composant .="onClick= 'submit()' ";
+	    }
+	    $composant .= "value = '" . $uneValue . "'/> ";
+	    return $composant;
+	}
+	
 	public function creerInputReset($unNom, $unId, $uneValue){
 	    $composant = "<input type = 'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    $composant .= "value = '" . $uneValue . "'/> ";
 	    return $composant;
 	}
 	
-	public function creerInputMail($unNom, $unId, $uneValue){
-	    $composant = "<input type = email'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
-	    $composant .= "value = '" . $uneValue . "'/> ";
+	public function creerInputMail($unNom, $unId, $uneValue, $required){
+	    $composant = "<input type = 'email' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    $composant .= "value = '" . $uneValue . "'";
+	    if ($required = 1){
+	        $composant .="required";
+	    }
+	    $composant .= ">";
 	    return $composant;
 	}
 
@@ -163,6 +176,13 @@ class Formulaire{
 	    return $composant;
 	}
 	
+	public function creerBouton($unNom, $uneClasse, $unePhrase, $unPrix){
+	    $composant = "<button name = '" . $unNom . "' ";
+	    $composant .= "class = '" . $uneClasse . "' ";
+	    $composant .= "type = 'submit' ";
+	    $composant .= "><b>" . $unePhrase ."</b><br />" . $unPrix ."</button>";
+	    return $composant;
+	}
 	
 	public function creerFormulaire(){
 		$this->formulaireToPrint = "<form method = '" .  $this->method . "' ";

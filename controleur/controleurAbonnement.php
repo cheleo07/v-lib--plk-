@@ -1,4 +1,13 @@
 <?php
+////formulaire boutons
+$formulaireBouton = new Formulaire("post", "", "fBouton", "fBouton");
+$formulaireBouton->ajouterComposantLigne($formulaireBouton->creerBouton("d1", "bouton bouton1", "Pass 24H", "1.5€"));
+$formulaireBouton->ajouterComposantLigne($formulaireBouton->creerBouton("d2", "bouton bouton2", "Pass 7 Jours", "7€"));
+$formulaireBouton->ajouterComposantLigne($formulaireBouton->creerBouton("d3", "bouton bouton3", "Pass Mensuel", "10€"));
+$formulaireBouton->ajouterComposantLigne($formulaireBouton->creerBouton("d4", "bouton bouton4", "Pass Annuel", "30€"));
+$formulaireBouton->ajouterComposantTab();
+$formulaireBouton->creerFormulaire();
+
 //formulaire abonnement 24h/7J
 $formulaireAbonnement = new Formulaire('post', 'index.php', 'fAbonnement', 'fAbonnement');
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('phrase1',"Pour recevoir votre code d'accès (à 6 chiffres) et votre code secret (à 4 chiffres), merci de remplir au moin l'un
@@ -7,12 +16,12 @@ $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('numPortable', "Numero de votre portable :"), 1);
 $formulaireAbonnement->ajouterComposantTab();
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputTexte('numPortable', 'numPortable', ""   , 1, "",0),1);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputTexte('numPortable', 'numPortable', "","", 0,0),1);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('mail', "Email :"), 1);
 $formulaireAbonnement->ajouterComposantTab();
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMail('mail', 'mail', ""   , 1, "",0),1);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMail('mail', 'mail', "" ,0),1);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('choix',"Choix du code secret"));
@@ -57,18 +66,18 @@ $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('p
 $formulairePayement->ajouterComposantTab();
 
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('numCarte', 'Numero de carte: '));
-$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('numCarte', 'numCarte', "", 1, "",0),1);
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('numCarte', 'numCarte', "", "", 1,0),1);
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('expire', 'Expire fin: '));
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerInputDate('expire', 'expire','18-01','25-12'),1);
 $formulairePayement->ajouterComposantTab();
 
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('controle', 'Numéro de controle au dos de la carte: '));
-$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('controle', 'controle', "", 1, "",0),1);
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('controle', 'controle', "", "", 1,0),1);
 $formulairePayement->ajouterComposantTab();
 
 $formulairePayement->ajouterComposantLigne($formulaireAbonnement-> creerInputPopup('submitPayement', 'submitPayement', 1, 'Valider'),2);
+$formulairePayement->ajouterComposantLigne($formulaireAbonnement->creerInputSubmitForce('submitAnnul', 'submitAnnul', 1,'Annuler retour au site'));
 $formulairePayement->ajouterComposantTab();
-
 $formulairePayement->creerFormulaire();
 
 //Formulaire abonnement M/A
@@ -83,13 +92,13 @@ $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('nom', "Nom :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('nom', 'nom', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('nom', 'nom', "", "", 1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('prenom', "Prénom :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('prenom', 'prenom', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('prenom', 'prenom', "" , "", 1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('date', "Date de naissance :"), 1);
@@ -99,47 +108,47 @@ $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('libelle', "Numéro et libelle de voie :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('libelle', 'libelle', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('libelle', 'libelle', "","", 1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('compl', "Complément destinataire (N° appart,...) :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('compl', 'compl', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('compl', 'compl', "", "",1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('complG', "Complément géographique (Entrée,...) :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('complG', 'complG', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('complG', 'complG', "" , "",1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('post', "Code postal :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('post', 'post', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('post', 'post', "", "", 1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('ville', "Ville :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('ville', 'ville', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('ville', 'ville', "" , "", 1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('numPortable', "Mobile :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('numPortable', 'numPortable', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('numPortable', 'numPortable', "", "", 1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('numFixe', "Téléphone Fixe :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('numFixe', 'numFixe', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('numFixe', 'numFixe', "", "",1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('mail', "Email :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMail('mail', 'mail', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMail('mail', 'mail', "", "",1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('mail', "Confirmation email :"), 1);
 $formulaireAbonnement2->ajouterComposantTab();
-$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMail('mail', 'mail', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMail('mail', 'mail', "", "",1,0),1);
 $formulaireAbonnement2->ajouterComposantTab();
 
 $formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('choix',"Choix du code secret"));
@@ -174,16 +183,17 @@ $formulairePayement2->ajouterComposantLigne($formulairePayement2->creerLabelFor(
 $formulairePayement2->ajouterComposantTab();
 
 $formulairePayement2->ajouterComposantLigne($formulairePayement2->creerLabelFor('numCarte', 'Numero de carte: '));
-$formulairePayement2->ajouterComposantLigne($formulairePayement2->creerInputTexte('numCarte', 'numCarte', "", 1, "",0),1);
+$formulairePayement2->ajouterComposantLigne($formulairePayement2->creerInputTexte('numCarte', 'numCarte', "", "", 1,0),1);
 $formulairePayement2->ajouterComposantLigne($formulairePayement2->creerLabelFor('expire', 'Expire fin: '));
 $formulairePayement2->ajouterComposantLigne($formulairePayement2->creerInputDate('expire', 'expire','18-01','25-12'),1);
 $formulairePayement2->ajouterComposantTab();
 
 $formulairePayement2->ajouterComposantLigne($formulairePayement2->creerLabelFor('controle', 'Numéro de controle au dos de la carte: '));
-$formulairePayement2->ajouterComposantLigne($formulairePayement2->creerInputTexte('controle', 'controle', "", 1, "",0),1);
+$formulairePayement2->ajouterComposantLigne($formulairePayement2->creerInputTexte('controle', 'controle', "", "", 1,0),1);
 $formulairePayement2->ajouterComposantTab();
 
 $formulairePayement2->ajouterComposantLigne($formulairePayement2-> creerInputPopup('submitPayement', 'submitPayement', 1, 'Valider'),2);
+$formulairePayement2->ajouterComposantLigne($formulaireAbonnement2->creerInputSubmitForce('submitAnnul', 'submitAnnul', 1,'Annuler retour au site'));
 $formulairePayement2->ajouterComposantTab();
 
 $formulairePayement2->creerFormulaire();

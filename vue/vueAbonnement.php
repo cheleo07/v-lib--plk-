@@ -7,6 +7,9 @@
   				alert("Votre transaction à bien été prise en compte.\nVous recevrez les détails de votre abonnement par mail.");
   				fPayement.submit();
   				}
+			function submit(){
+				fPayement.submit()
+			}
 		</script>
 	</header>
 	<main>
@@ -15,14 +18,9 @@
 	//tant que pas appuyé sur un bouton et submitAbo le menu s'affiche
 	if(!isset($_POST['d1'])AND !isset($_POST['d2'])AND !isset($_POST['d3'])AND !isset($_POST['d4'])AND !isset($_POST['submitAbo'])AND !isset($_POST['submitAbo2'])){
 	?>
-	<h1>Abonnements</h1>
-	<form action="" method="post">
-	<button name="d1" class="bouton bouton1" type="submit"><b>Pass 24H </b><br />1.5€</button>
-    <button name="d2" class="bouton bouton2" type="submit"><b>Pass 7 Jours</b><br />7€</button>
-    <button name="d3" class="bouton bouton3" type="submit"><b>Pass Mensuel</b><br />10€</button>
-    <button name="d4" class="bouton bouton4" type="submit"><b>Pass Annuel</b><br />30€</button>
-    </form>
+		<h1>Achetez vos abonnement en ligne</h1>
     <?php
+        echo $formulaireBouton->afficherFormulaire();
 	}
 	//appuyer sur un bouton affiche le formulaire d'abonnement
 	if(isset($_POST['d1'])){
