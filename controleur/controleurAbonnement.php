@@ -1,4 +1,5 @@
 <?php
+//formulaire abonnement 24h/7J
 $formulaireAbonnement = new Formulaire('post', 'index.php', 'fAbonnement', 'fAbonnement');
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('phrase1',"Pour recevoir votre code d'accès (à 6 chiffres) et votre code secret (à 4 chiffres), merci de remplir au moin l'un
     des 2 champs suivants:"));
@@ -36,7 +37,7 @@ $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputR
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->creerFormulaire();
-
+//Formulaire payement 24/7J
 $formulairePayement = new Formulaire('post', 'index.php', 'fPayement', 'fPayement');
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('idCommerce', 'Id commerçant '));
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('idCommerce', '05347519603679 '));
@@ -69,6 +70,60 @@ $formulairePayement->ajouterComposantLigne($formulaireAbonnement-> creerInputPop
 $formulairePayement->ajouterComposantTab();
 
 $formulairePayement->creerFormulaire();
+
+//Formulaire abonnement M/A
+$formulaireAbonnement2 = new Formulaire('post', 'index.php', 'fAbonnement2', 'fAbonnement2');
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputCheckbox('carte', 'carte', 'je dispose dune carte'), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputRadio('civil', 'm', 'M.'), 1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputRadio('civil', 'mme', 'Mme.'), 1);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputRadio('civil', 'mlle', 'Mlle.'), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('numPortable', "Mobile :"), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('numPortable', 'numPortable', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('numFixe', "Téléphone Fixe :"), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputTexte('numFixe', 'numFixe', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('mail', "Email :"), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMail('mail', 'mail', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('mail', "Confirmation email :"), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMail('mail', 'mail', ""   , 1, "",0),1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('choix',"Choix du code secret"));
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('phrase2',"Choisissez ci-dessous un code secret à 4 chiffres."));
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('phrase2',"Ce code secret vous permettra de vous identifier sur les bornes et vous permettra, avec votre code d'accès, d'accéder a votre compte sur ce site."));
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('codesecret', 'Code secret (4 chiffres):'), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMdp('codesecret', 'codesecret', "" ,"","",4,4),1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerLabelFor('codesecret2', 'Confirmation du code secret:'), 1);
+$formulaireAbonnement2->ajouterComposantTab();
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2->creerInputMdp('codesecret2', 'codesecret2', "" ,"","",4,4),1);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2-> creerInputBack('retourAbo', 'retourAbo', 1, 'Retour'),2);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2-> creerInputSubmit('submitAbo', 'submitAbo', 'Continuer'),2);
+$formulaireAbonnement2->ajouterComposantLigne($formulaireAbonnement2-> creerInputReset('ResetAbo', 'ResetAbo', 'Annuler'),2);
+$formulaireAbonnement2->ajouterComposantTab();
+
+$formulaireAbonnement2->creerFormulaire();
 
 require_once 'vue/vueAbonnement.php' ;
 require_once 'fonctions/formulaire.php';

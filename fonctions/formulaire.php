@@ -100,6 +100,20 @@ class Formulaire{
 	    return $composant;
 	}
 	
+	public function creerInputCheckbox($unNom, $uneValue, $phrase){
+	    $composant = "<input type = 'checkbox' name = '" . $unNom . "' ";
+	    $composant .= "value = '" . $uneValue . "' ";
+	    $composant .=  ">'". $phrase . "'<br>";
+	    return $composant;
+	}
+	
+	public function creerInputRadio($unNom, $uneValue, $phrase){
+	    $composant = "<input type = 'radio' name = '" . $unNom . "' ";
+	    $composant .= "value = '" . $uneValue . "' ";
+	    $composant .=  ">'". $phrase . "'<br>";
+	    return $composant;
+	}
+	
 	public function creerInputDate($unNom, $unId, $min, $max){
 	    $composant = "<input type = 'date' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    $composant .= "value = '" . date("m/y") . "' ";

@@ -34,7 +34,7 @@ $menuPrincipal = $vlib->creerMenu( $_SESSION['vlib'],'vlib');
 
 
 include_once dispatcher::dispatch( $_SESSION['vlib']);
-var_dump($_SESSION);
+
 
 
 
