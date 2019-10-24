@@ -25,29 +25,29 @@
 	//appuyer sur un bouton affiche le formulaire d'abonnement
 	if(isset($_POST['d1'])){
 	?>
-	    <h1>Adhésion 24H</h1>
-	    <h2>Données personnelles</h2>
+	    <h1 class="titre">Adhésion 24H</h1>
+	    <h2 class="soustitre">Données personnelles</h2>
 	<?php
 	    echo $formulaireAbonnement->afficherFormulaire();
 	}
 	else if(isset($_POST['d2'])){
 	?>
-	    <h1>Adhésion 7 Jours</h1>
-	    <h2>Données personnelles</h2>
+	    <h1 class="titre">Adhésion 7 Jours</h1>
+	    <h2 class="soustitre">Données personnelles</h2>
 	<?php
 	    echo $formulaireAbonnement->afficherFormulaire();
     }
     else if(isset($_POST['d3'])){
     ?>
-	    <h1>Adhésion Mensuelle</h1>
-	    <h2>Données personnelles</h2>
+	    <h1 class="titre">Adhésion Mensuelle</h1>
+	    <h2 class="soustitre">Données personnelles</h2>
 	<?php
         echo $formulaireAbonnement2->afficherFormulaire();
     }
     else if(isset($_POST['d4'])){
     ?>
-	    <h1>Adhésion Anuelle</h1>
-	    <h2>Données personnelles</h2>
+	    <h1 class="titre">Adhésion Anuelle</h1>
+	    <h2 class="soustitre">Données personnelles</h2>
 	<?php
         echo $formulaireAbonnement2->afficherFormulaire();
     }
