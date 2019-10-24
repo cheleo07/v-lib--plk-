@@ -41,9 +41,6 @@
     if(isset($_POST['submitAbo'])){
         echo $formulairePayement->afficherFormulaire();
     }
-    if(isset($_POST['submiPayement'])){
-        popup();
-    }
     ?>
 	</main>
 	</div>
