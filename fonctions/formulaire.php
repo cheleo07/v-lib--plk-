@@ -54,7 +54,7 @@ class Formulaire{
 		return $composant;
 	}
 	
-	public function creerInputMdp($unNom, $unId,  $required , $placeholder , $pattern){
+	public function creerInputMdp($unNom, $unId,  $required , $placeholder , $pattern, $min, $max){
 		$composant = "<input type = 'password' name = '" . $unNom . "' id = '" . $unId . "' ";
 		if (!empty($placeholder)){
 			$composant .= "placeholder = '" . $placeholder . "' ";
@@ -65,6 +65,8 @@ class Formulaire{
 		if (!empty($pattern)){
 			$composant .= "pattern = '" . $pattern . "' ";
 		}
+		$composant .= "minlength = '" . $min . "' ";
+		$composant .= "maxlength = '" . $max . "' ";
 		$composant .= "/>";
 		return $composant;
 	}
@@ -98,6 +100,14 @@ class Formulaire{
 	    return $composant;
 	}
 	
+	public function creerInputDate($unNom, $unId, $min, $max){
+	    $composant = "<input type = 'date' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    $composant .= "value = '" . date("m/y") . "' ";
+	    $composant .= "max = '" . $max . "' ";
+	    $composant .= "min = '" . $min . "'/> ";
+	    return $composant;
+	}
+	
 	public function creerInputPopup($unNom, $unId, $onclick, $uneValue){
 	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    if ($onclick = 1){
@@ -109,6 +119,12 @@ class Formulaire{
 	
 	public function creerInputReset($unNom, $unId, $uneValue){
 	    $composant = "<input type = 'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    $composant .= "value = '" . $uneValue . "'/> ";
+	    return $composant;
+	}
+	
+	public function creerInputMail($unNom, $unId, $uneValue){
+	    $composant = "<input type = email'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    $composant .= "value = '" . $uneValue . "'/> ";
 	    return $composant;
 	}

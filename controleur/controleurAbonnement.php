@@ -11,7 +11,7 @@ $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('mail', "Email :"), 1);
 $formulaireAbonnement->ajouterComposantTab();
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputTexte('mail', 'mail', ""   , 1, "",0),1);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMail('mail', 'mail', ""   , 1, "",0),1);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('choix',"Choix du code secret"));
@@ -22,12 +22,12 @@ $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('codesecret', 'Code secret (4 chiffres):'), 1);
 $formulaireAbonnement->ajouterComposantTab();
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMdp('codesecret', 'codesecret', "" ,"","",0),1);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMdp('codesecret', 'codesecret', "" ,"","",4,4),1);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerLabelFor('codesecret2', 'Confirmation du code secret:'), 1);
 $formulaireAbonnement->ajouterComposantTab();
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMdp('codesecret2', 'codesecret2', "" ,"","",0),1);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMdp('codesecret2', 'codesecret2', "" ,"","",4,4),1);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputBack('retourAbo', 'retourAbo', 1, 'Retour'),2);
@@ -58,7 +58,7 @@ $formulairePayement->ajouterComposantTab();
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('numCarte', 'Numero de carte: '));
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('numCarte', 'numCarte', "", 1, "",0),1);
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('expire', 'Expire fin: '));
-$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputTexte('expire', 'expire', "", 1, "",0),1);
+$formulairePayement->ajouterComposantLigne($formulairePayement->creerInputDate('expire', 'expire','18-01','25-12'),1);
 $formulairePayement->ajouterComposantTab();
 
 $formulairePayement->ajouterComposantLigne($formulairePayement->creerLabelFor('controle', 'Numéro de controle au dos de la carte: '));
