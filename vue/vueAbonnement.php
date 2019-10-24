@@ -13,7 +13,7 @@
 	<div class="texteAccueil">
 	<?php 
 	//tant que pas appuyé sur un bouton et submitAbo le menu s'affiche
-	if(!isset($_POST['d1'])AND !isset($_POST['d2'])AND !isset($_POST['d3'])AND !isset($_POST['d4'])AND !isset($_POST['submitAbo'])){
+	if(!isset($_POST['d1'])AND !isset($_POST['d2'])AND !isset($_POST['d3'])AND !isset($_POST['d4'])AND !isset($_POST['submitAbo'])AND !isset($_POST['submitAbo2'])){
 	?>
 	<h1>Abonnements</h1>
 	<form action="" method="post">
@@ -58,6 +58,13 @@
     ?>
     <div class="payement">
         <?php echo $formulairePayement->afficherFormulaire();?>
+    </div>
+    <?php
+    }
+    if(isset($_POST['submitAbo2'])){
+    ?>
+    <div class="payement">
+        <?php echo $formulairePayement2->afficherFormulaire();?>
     </div>
     <?php
     }

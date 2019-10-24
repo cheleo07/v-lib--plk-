@@ -103,20 +103,28 @@ class Formulaire{
 	public function creerInputCheckbox($unNom, $uneValue, $phrase){
 	    $composant = "<input type = 'checkbox' name = '" . $unNom . "' ";
 	    $composant .= "value = '" . $uneValue . "' ";
-	    $composant .=  ">'". $phrase . "'<br>";
+	    $composant .=  ">". $phrase . "";
 	    return $composant;
 	}
 	
 	public function creerInputRadio($unNom, $uneValue, $phrase){
 	    $composant = "<input type = 'radio' name = '" . $unNom . "' ";
 	    $composant .= "value = '" . $uneValue . "' ";
-	    $composant .=  ">'". $phrase . "'<br>";
+	    $composant .=  ">". $phrase . "";
 	    return $composant;
 	}
 	
 	public function creerInputDate($unNom, $unId, $min, $max){
 	    $composant = "<input type = 'date' name = '" . $unNom . "' id = '" . $unId . "' ";
 	    $composant .= "value = '" . date("m/y") . "' ";
+	    $composant .= "max = '" . $max . "' ";
+	    $composant .= "min = '" . $min . "'/> ";
+	    return $composant;
+	}
+	
+	public function creerInputDate2($unNom, $unId, $min, $max){
+	    $composant = "<input type = 'date' name = '" . $unNom . "' id = '" . $unId . "' ";
+	    $composant .= "value = '" . date("d/m/Y") . "' ";
 	    $composant .= "max = '" . $max . "' ";
 	    $composant .= "min = '" . $min . "'/> ";
 	    return $composant;
