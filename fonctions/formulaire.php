@@ -85,14 +85,14 @@ class Formulaire{
 		return $composant;
 	}	
 	
-	public function creerInputSubmit($unNom, $unId, $uneValue){
-		$composant = "<input type = 'submit' name = '" . $unNom . "' id = '" . $unId . "' ";
+	public function creerInputSubmit($unNom, $uneClasse, $uneValue){
+	    $composant = "<input type = 'submit' name = '" . $unNom . "' class = '" . $uneClasse . "' ";
 		$composant .= "value = '" . $uneValue . "'/> ";
 		return $composant;
 	}
 	
-	public function creerInputBack($unNom, $unId, $onclick, $uneValue){
-	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
+	public function creerInputBack($unNom, $uneClasse, $onclick, $uneValue){
+	    $composant = "<input type = 'button' name = '" . $unNom . "' class = '" . $uneClasse . "' ";
 	    if ($onclick = 1){
 	        $composant .="onClick= 'window.history.back()' ";
 	    }
@@ -130,8 +130,8 @@ class Formulaire{
 	    return $composant;
 	}
 	
-	public function creerInputPopup($unNom, $unId, $onclick, $uneValue){
-	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
+	public function creerInputPopup($unNom, $uneClasse, $onclick, $uneValue){
+	    $composant = "<input type = 'button' name = '" . $unNom . "' class = '" . $uneClasse . "' ";
 	    if ($onclick = 1){
 	        $composant .="onClick= 'popup()' ";
 	    }
@@ -139,8 +139,8 @@ class Formulaire{
 	    return $composant;
 	}
 	
-	public function creerInputSubmitForce($unNom, $unId, $onclick, $uneValue){
-	    $composant = "<input type = 'button' name = '" . $unNom . "' id = '" . $unId . "' ";
+	public function creerInputSubmitForce($unNom, $uneClasse, $onclick, $uneValue){
+	    $composant = "<input type = 'button' name = '" . $unNom . "' class = '" . $uneClasse . "' ";
 	    if ($onclick = 1){
 	        $composant .="onClick= 'submit()' ";
 	    }
@@ -148,8 +148,8 @@ class Formulaire{
 	    return $composant;
 	}
 	
-	public function creerInputReset($unNom, $unId, $uneValue){
-	    $composant = "<input type = 'reset' name = '" . $unNom . "' id = '" . $unId . "' ";
+	public function creerInputReset($unNom, $uneClasse, $uneValue){
+	    $composant = "<input type = 'reset' name = '" . $unNom . "' class = '" . $uneClasse . "' ";
 	    $composant .= "value = '" . $uneValue . "'/> ";
 	    return $composant;
 	}

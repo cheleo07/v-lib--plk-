@@ -42,7 +42,7 @@ $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputBack('retour', 'retour', 1, 'Retour'),2);
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputSubmit('submit', 'submit', 'Continuer'),2);
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputReset('ResetAbo', 'ResetAbo', 'Annuler'),2);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputReset('Reset', 'Reset', 'Annuler'),2);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->creerFormulaire();
