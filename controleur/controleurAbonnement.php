@@ -40,9 +40,9 @@ $formulaireAbonnement->ajouterComposantTab();
 $formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement->creerInputMdp('codesecret2', 'codesecret2', "" ,"","",4,4),1);
 $formulaireAbonnement->ajouterComposantTab();
 
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputBack('retour', 'retour', 1, 'Retour'),2);
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputSubmit('submit', 'submit', 'Continuer'),2);
-$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputReset('Reset', 'Reset', 'Annuler'),2);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputBack('retourAbo', 'retourAbo', 1, 'Retour'),2);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputSubmit('submitAbo', 'submitAbo', 'Continuer'),2);
+$formulaireAbonnement->ajouterComposantLigne($formulaireAbonnement-> creerInputReset('ResetAbo', 'ResetAbo', 'Annuler'),2);
 $formulaireAbonnement->ajouterComposantTab();
 
 $formulaireAbonnement->creerFormulaire();
