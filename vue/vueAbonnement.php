@@ -1,16 +1,7 @@
 
 <div class="conteneur">
 <header>
-		<?php include 'haut.php' ;?>
-		<script>
-			function popup() {
-  				alert("Votre transaction à bien été prise en compte.\nVous recevrez les détails de votre abonnement par mail.");
-  				fPayement.submit();
-  				}
-			function submit(){
-				fPayement.submit()
-			}
-		</script>
+	<?php include 'haut.php' ;?>
 	</header>
 	<main>
 	<div class="texteAccueil">
@@ -69,6 +60,15 @@
     ?>
 	</main>
 	</div>
+	<script>
+			function popup() {
+  				alert("Votre transaction à bien été prise en compte.\nVous recevrez les détails de votre abonnement par mail.");
+  				fPayement.submit();
+  				}
+			function submit(){
+				fPayement.submit()
+			}
+		</script>
 	<footer>
 		<?php include 'bas.php' ;?>
 	</footer>
