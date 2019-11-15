@@ -198,6 +198,11 @@ $formulairePayement2->ajouterComposantTab();
 
 $formulairePayement2->creerFormulaire();
 
+if(isset($_POST['submitPayement'])){
+    $unUser=new utilisateur('','','abo',$_POST['nom'], $_POST['prenom'], $_POST['civil'], $_POST['date'], $_POST['libelle']." ".$_POST['compl'], $_POST['post'], $_POST['ville'], $_POST['numPortable'], $_POST['numFixe'], $_POST['mail']);
+    $unAbo=new abonnee('','','','','','','','test');
+}
+
 require_once 'vue/vueAbonnement.php' ;
 require_once 'fonctions/formulaire.php';
 require_once 'fonctions/menu.php';
