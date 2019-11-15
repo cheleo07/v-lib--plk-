@@ -20,17 +20,23 @@ class UtilisateurDAO{
     }
     
     public static function ajouter(utilisateur $utilisateur){
-        $requetePrepa = DBConnex::getInstance()->prepare("INSERT INTO UTILISATEUR VALUES (NULL, NULL, NULL, :nom, :prenom, :sexe, :datenais, :adresse, :codepost, :ville, :telmob, :telfix, :mail);");
+        $requetePrepa = DBConnex::getInstance()->prepare("INSERT INTO UTILISATEUR VALUES (:codeacces, :codesecret, :typeutilisateur, :nom, :prenom, :sexe, :datenais, :adresse, :codepost, :ville, :telmob, :telfix, :mail);");
+        $unCodeAcces = 1;
+        $unCodeSecret = 1;
+        $unType ='';
         $unNom = $utilisateur->getNom();
         $unPrenom = $utilisateur->getPrenom();
         $unSexe = $utilisateur->getSexe();
-        $uneDate = $utilisateur->getDatedenaissance();
+        $uneDate = $utilisateur->getdatenais();
         $uneAdresse = $utilisateur->getAdresse();
-        $unCodePost = $utilisateur->getCodepostal();
+        $unCodePost = $utilisateur->getcodepost();
         $uneVille = $utilisateur->getVille();
-        $unTelMob = $utilisateur->getTelmobile();
-        $unTelFix = $utilisateur->getTelfixe();
+        $unTelMob = $utilisateur->gettelmob();
+        $unTelFix = $utilisateur->gettelfix();
         $unMail = $utilisateur->getMail();
+        $requetePrepa->bindParam( ":codeacces", $unCodeAcces);
+        $requetePrepa->bindParam( ":codesecret", $unCodeSecret);
+        $requetePrepa->bindParam( ":typeutilisateur", $unType);
         $requetePrepa->bindParam( ":nom", $unNom);
         $requetePrepa->bindParam( ":prenom", $unPrenom);
         $requetePrepa->bindParam( ":sexe", $unSexe);
@@ -41,6 +47,7 @@ class UtilisateurDAO{
         $requetePrepa->bindParam( ":telmob", $unTelMob);
         $requetePrepa->bindParam( ":telfix", $unTelFix);
         $requetePrepa->bindParam( ":mail", $unMail);
+        var_dump($requetePrepa);
         return  $requetePrepa->execute();
     }
 }

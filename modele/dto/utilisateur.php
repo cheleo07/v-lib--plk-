@@ -1,32 +1,32 @@
 <?php
-class abonne{
+class utilisateur{
    private $codeacces;
    private $codesecret;
    protected $typeutilisateur;
    protected $nom;
    protected $prenom;
    protected $sexe;
-   protected $datedenaissance;
+   protected $datenais;
    protected $adresse;
-   protected $codepostal;
+   protected $codepost;
    protected $ville;
-   protected $telmobile;
-   protected $telfixe;
+   protected $telmob;
+   protected $telfix;
    protected $mail;
    
-   public function __construct($codeacces,$codesecret, $typeutilisateur, $nom, $prenom, $sexe, $datedenaissance, $adresse, $codepostal, $ville, $telmobile, $telfixe, $mail){
+   public function __construct($codeacces,$codesecret, $typeutilisateur, $nom, $prenom, $sexe, $datenais, $adresse, $codepost, $ville, $telmob, $telfix, $mail){
        $this->codeacces=$codeacces;
        $this->codesecret=$codesecret;
        $this->typeutilisateur=$typeutilisateur;
        $this->nom=$nom;
        $this->prenom=$prenom;
        $this->sexe=$sexe;
-       $this->datedenaissance=$datedenaissance;
+       $this->datenais=$datenais;
        $this->adresse=$adresse;
-       $this->codepostal=$codepostal;
+       $this->codepost=$codepost;
        $this->ville=$ville;
-       $this->telmobile=$telmobile;
-       $this->telfixe=$telfixe;
+       $this->telmob=$telmob;
+       $this->telfix=$telfix;
        $this->mail=$mail;
    }
 /**
@@ -80,9 +80,9 @@ class abonne{
 /**
      * @return mixed
      */
-    public function getDatedenaissance()
+    public function getdatenais()
     {
-        return $this->datedenaissance;
+        return $this->datenais;
     }
 
 /**
@@ -96,9 +96,9 @@ class abonne{
 /**
      * @return mixed
      */
-    public function getCodepostal()
+    public function getcodepost()
     {
-        return $this->codepostal;
+        return $this->codepost;
     }
 
 /**
@@ -112,17 +112,17 @@ class abonne{
 /**
      * @return mixed
      */
-    public function getTelmobile()
+    public function gettelmob()
     {
-        return $this->telmobile;
+        return $this->telmob;
     }
 
 /**
      * @return mixed
      */
-    public function getTelfixe()
+    public function gettelfix()
     {
-        return $this->telfixe;
+        return $this->telfix;
     }
 
 /**
@@ -182,11 +182,11 @@ class abonne{
     }
 
 /**
-     * @param mixed $datedenaissance
+     * @param mixed $datenais
      */
-    public function setDatedenaissance($datedenaissance)
+    public function setdatenais($datenais)
     {
-        $this->datedenaissance = $datedenaissance;
+        $this->datenais = $datenais;
     }
 
 /**
@@ -198,11 +198,11 @@ class abonne{
     }
 
 /**
-     * @param mixed $codepostal
+     * @param mixed $codepost
      */
-    public function setCodepostal($codepostal)
+    public function setcodepost($codepost)
     {
-        $this->codepostal = $codepostal;
+        $this->codepost = $codepost;
     }
 
 /**
@@ -214,19 +214,19 @@ class abonne{
     }
 
 /**
-     * @param mixed $telmobile
+     * @param mixed $telmob
      */
-    public function setTelmobile($telmobile)
+    public function settelmob($telmob)
     {
-        $this->telmobile = $telmobile;
+        $this->telmob = $telmob;
     }
 
 /**
-     * @param mixed $telfixe
+     * @param mixed $telfix
      */
-    public function setTelfixe($telfixe)
+    public function settelfix($telfix)
     {
-        $this->telfixe = $telfixe;
+        $this->telfix = $telfix;
     }
 
 /**

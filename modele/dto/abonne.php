@@ -2,20 +2,20 @@
 class abonne extends utilisateur{
    private $codeacces;
    private $codesecret;
-   private $codeabonnement;
-   private $datedebutabonnement;
-   private $datefinabonnement;
+   private $codea;
+   private $datedebabon;
+   private $datefinabon;
    private $crédittemps;
    private $montantadebiter;
    private $vencours;
    
-   public function __construct($codeacces= NULL,$codesecret= NULL, $codeabonnement= NULL, $datedebutabonnement= NULL, $datefinabonnement= NULL, $crédittemps= NULL, $montantadebiter= NULL, $vencours= NULL){
-       parent::__construct($typeutilisateur, $nom, $prenom, $sexe, $datedenaissance, $adresse, $codepostal, $ville, $telmobile, $telfixe, $mail);
+   public function __construct($codeacces= NULL,$codesecret= NULL, $codea= NULL, $datedebabon= NULL, $datefinabon= NULL, $crédittemps= NULL, $montantadebiter= NULL, $vencours= NULL){
+       parent::__construct($typeutilisateur, $nom, $prenom, $sexe, $datenais, $adresse, $codepost, $ville, $telmob, $telfix, $mail);
        $this->codeacces=$codeacces;
        $this->codesecret=$codesecret;
-       $this->codeabonnement=$codeabonnement;
-       $this->datedebutabonnement=$datedebutabonnement;
-       $this->datefinabonnement=$datefinabonnement;
+       $this->codea=$codea;
+       $this->datedebabon=$datedebabon;
+       $this->datefinabon=$datefinabon;
        $this->crédittemps=$crédittemps;
        $this->montantadebiter=$montantadebiter;
        $this->vencours=$vencours;
@@ -39,25 +39,25 @@ class abonne extends utilisateur{
 /**
      * @return mixed
      */
-    public function getCodeabonnement()
+    public function getcodea()
     {
-        return $this->codeabonnement;
+        return $this->codea;
     }
 
 /**
      * @return mixed
      */
-    public function getDatedebutabonnement()
+    public function getdatedebabon()
     {
-        return $this->datedebutabonnement;
+        return $this->datedebabon;
     }
 
 /**
      * @return mixed
      */
-    public function getDatefinabonnement()
+    public function getdatefinabon()
     {
-        return $this->datefinabonnement;
+        return $this->datefinabon;
     }
 
 /**
@@ -101,27 +101,27 @@ class abonne extends utilisateur{
     }
 
 /**
-     * @param mixed $codeabonnement
+     * @param mixed $codea
      */
-    public function setCodeabonnement($codeabonnement)
+    public function setcodea($codea)
     {
-        $this->codeabonnement = $codeabonnement;
+        $this->codea = $codea;
     }
 
 /**
-     * @param mixed $datedebutabonnement
+     * @param mixed $datedebabon
      */
-    public function setDatedebutabonnement($datedebutabonnement)
+    public function setdatedebabon($datedebabon)
     {
-        $this->datedebutabonnement = $datedebutabonnement;
+        $this->datedebabon = $datedebabon;
     }
 
 /**
-     * @param mixed $datefinabonnement
+     * @param mixed $datefinabon
      */
-    public function setDatefinabonnement($datefinabonnement)
+    public function setdatefinabon($datefinabon)
     {
-        $this->datefinabonnement = $datefinabonnement;
+        $this->datefinabon = $datefinabon;
     }
 
 /**
