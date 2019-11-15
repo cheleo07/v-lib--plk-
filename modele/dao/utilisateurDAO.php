@@ -3,7 +3,7 @@ class UtilisateurDAO{
     
     public static function verification(utilisateur $utilisateur){
         
-        $requetePrepa = DBConnex::getInstance()->prepare("SELECT CODEACCES,NOM,PRENOM,TYPEUTILISATEUR from UTILISATEUR where CODEACCES = :codeacces and  CODESECRET = :codesecret");
+        $requetePrepa = DBConnex::getInstance()->prepare("SELECT CODEACCES,CODESECRET,NOM,PRENOM,TYPEUTILISATEUR from UTILISATEUR where CODEACCES = :codeacces and  CODESECRET = :codesecret");
         
         $codeacces = $utilisateur->getCodeacces();
         $codesecret = $utilisateur->getCodesecret();
@@ -19,4 +19,6 @@ class UtilisateurDAO{
         return $login;
     }
     
+    
+
 }
