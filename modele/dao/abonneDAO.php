@@ -1,11 +1,19 @@
 <?php
 class abonneDAO{
     public static function ajouter(abonne $abonne){
-        $requetePrepa = DBConnex::getInstance()->prepare("INSERT INTO ABONNE VALUES (3333, 2222, 2, 2019-10-02, 2019-10-05, 10, 123, 0);
-                                                          INSERT INTO UTILISATEUR VALUES (3333, 2222, 'abo', 'leo', 'leo', 'M', 2019-10-02, '4rue des lylas', '20000', 'Ajaccio', '0615664489', '0495611674', 'lfg@gmail.com');");
-        $requetePrepa->bindParam(":submitPayement", $abonne->getgetCodeacces());
+        $requetePrepa = DBConnex::getInstance()->prepare("INSERT INTO UTILISATEUR VALUES (:codeacces, :codesecret, :typeutilisateur, :nom, :prenom, :sexe, :datenais, :adresse, :codepost, :ville, :telmob, :telfix, :mail)");
+        $requetePrepa->bindParam(":submitPayement", $abonne->getCodeacces());
         $requetePrepa->execute();
         return  $requetePrepa->fetch();   
     }
+    
+   /* $stmt = $dbh->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':value', $value);
+    
+    // insertion d'une ligne
+    $name = 'one';
+    $value = 1;
+    $stmt->execute();*/
     
 }
