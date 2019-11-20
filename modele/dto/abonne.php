@@ -1,22 +1,35 @@
 <?php
 class abonne extends utilisateur{
-   private $codeacces;
-   private $codesecret;
-   private $codea;
+   static $codeacces;
+   static $codesecret;
+   static $dernierCodeAcces=1111;
+   static $dernierCodeSecret=1111;
+   static $codea=0;
+   static $dernierCodeA=1111;
    private $datedebabon;
    private $datefinabon;
-   private $crédittemps;
+   private $credittemps;
    private $montantadebiter;
    private $vencours;
-   
-   public function __construct($codeacces= NULL,$codesecret= NULL, $codea= NULL, $datedebabon= NULL, $datefinabon= NULL, $crédittemps= NULL, $montantadebiter= NULL, $vencours= NULL){
+
+
+}
+   public function __construct($codeacces= NULL,$codesecret= NULL, $codea= NULL, $datedebabon= NULL, $datefinabon= NULL, $credittemps= NULL, $montantadebiter= NULL, $vencours= NULL){
        parent::__construct($typeutilisateur, $nom, $prenom, $sexe, $datenais, $adresse, $codepost, $ville, $telmob, $telfix, $mail);
-       $this->codeacces=$codeacces;
-       $this->codesecret=$codesecret;
-       $this->codea=$codea;
+        if($_POST['submitAbo2'] or $_POST['submitAbo']){
+            $_SESSION['dernierCodeAcces']++;
+            $_SESSION['dernierCodeSecret']++;
+            $_SESSION['dernierCodeA']++;
+        }
+       static::$dernierCodeAcces=$_SESSION['dernierCodeAcces'];
+       static::$dernierCodeSecret=$_SESSION['dernierCodeSecret'];
+       static::$dernierCodeA=$_SESSION['dernierCodeA'];
+       $this->codeacces=static::$dernierCodeAcces;
+       $this->codesecret=static::$dernierCodeSecret;
+       $this->codea=static::$dernierCodeA;
        $this->datedebabon=$datedebabon;
        $this->datefinabon=$datefinabon;
-       $this->crédittemps=$crédittemps;
+       $this->credittemps=$credittemps;
        $this->montantadebiter=$montantadebiter;
        $this->vencours=$vencours;
    }
@@ -63,9 +76,9 @@ class abonne extends utilisateur{
 /**
      * @return mixed
      */
-    public function getCrédittemps()
+    public function getcredittemps()
     {
-        return $this->crédittemps;
+        return $this->credittemps;
     }
 
 /**
@@ -125,11 +138,11 @@ class abonne extends utilisateur{
     }
 
 /**
-     * @param mixed $crédittemps
+     * @param mixed $credittemps
      */
-    public function setCrédittemps($crédittemps)
+    public function setcredittemps($credittemps)
     {
-        $this->crédittemps = $crédittemps;
+        $this->credittemps = $credittemps;
     }
 
 /**

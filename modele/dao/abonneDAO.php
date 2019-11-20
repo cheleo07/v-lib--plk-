@@ -7,7 +7,7 @@ class abonneDAO{
         $unCodeA = $abonne->getcodea();
         $uneDateAbo = $abonne->getdatedebabon();
         $uneDateFin = $abonne->getdatefinabon();
-        $unCredit = $abonne->getCrédittemps();
+        $unCredit = $abonne->getcredittemps();
         $unMontant = $abonne->getMontantadebiter();
         $unVencours = $abonne->getVencours();
         $requetePrepa->bindParam( ":codeacces", $unCodeAcces);

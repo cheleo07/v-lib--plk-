@@ -1,7 +1,9 @@
 <?php
 class utilisateur{
-   private $codeacces;
-   private $codesecret;
+   protected  $codeacces;
+   protected  $codesecret;
+   protected static $dernierCodeAcces=1111;
+   protected static $dernierCodeSecret=1111;
    protected $typeutilisateur;
    protected $nom;
    protected $prenom;
@@ -14,9 +16,15 @@ class utilisateur{
    protected $telfix;
    protected $mail;
    
-   public function __construct($codeacces,$codesecret, $typeutilisateur, $nom, $prenom, $sexe, $datenais, $adresse, $codepost, $ville, $telmob, $telfix, $mail){
-       $this->codeacces=$codeacces;
-       $this->codesecret=$codesecret;
+   public function __construct($typeutilisateur, $nom, $prenom, $sexe, $datenais, $adresse, $codepost, $ville, $telmob, $telfix, $mail){
+        if($_POST['submitAbo2'] or $_POST['submitAbo']){
+            $_SESSION['dernierCodeAcces']++;
+            $_SESSION['dernierCodeSecret']++;
+        }
+        static::$dernierCodeAcces=$_SESSION['dernierCodeAcces'];
+        static::$dernierCodeSecret=$_SESSION['dernierCodeSecret'];
+       $this->codeacces=static::$dernierCodeAcces;
+       $this->codesecret=static::$dernierCodeSecret;
        $this->typeutilisateur=$typeutilisateur;
        $this->nom=$nom;
        $this->prenom=$prenom;

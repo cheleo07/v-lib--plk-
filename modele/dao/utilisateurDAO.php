@@ -21,8 +21,8 @@ class UtilisateurDAO{
     
     public static function ajouter(utilisateur $utilisateur){
         $requetePrepa = DBConnex::getInstance()->prepare("INSERT INTO UTILISATEUR VALUES (:codeacces, :codesecret, :typeutilisateur, :nom, :prenom, :sexe, :datenais, :adresse, :codepost, :ville, :telmob, :telfix, :mail);");
-        $unCodeAcces = 1;
-        $unCodeSecret = 1;
+        $unCodeAcces = $utilisateur->getCodeacces();
+        $unCodeSecret = $utilisateur->getCodesecret();
         $unType ='';
         $unNom = $utilisateur->getNom();
         $unPrenom = $utilisateur->getPrenom();

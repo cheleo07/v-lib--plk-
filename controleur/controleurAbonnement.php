@@ -199,10 +199,16 @@ $formulairePayement2->ajouterComposantTab();
 $formulairePayement2->creerFormulaire();
 
 if(isset($_POST['submitAbo2'])){
-    $unUser=new utilisateur('','','',$_POST['nom'], $_POST['prenom'], $_POST['civil'], $_POST['date'], $_POST['libelle']." ".$_POST['compl'], $_POST['post'], $_POST['ville'], $_POST['numPortable'], $_POST['numFixe'], $_POST['mail']);
+    $unUser=new utilisateur('',$_POST['nom'], $_POST['prenom'], $_POST['civil'], $_POST['date'], $_POST['libelle']." ".$_POST['compl']." ".$_POST['complG'], $_POST['post'], $_POST['ville'], $_POST['numPortable'], $_POST['numFixe'], $_POST['mail']);
     UtilisateurDAO::ajouter($unUser);
-    $unAbo=new abonne('','','','','','','','test');
-    abonneDAO::ajouter($unAbo);
+    /*$unAbo=new abonne('','','','','','','','test');
+    abonneDAO::ajouter($unAbo);*/
+}
+if(isset($_POST['submitAbo'])){
+    $unUser=new utilisateur('','', '', '', '', '', '', '', $_POST['numPortable'], '', $_POST['mail']);
+    UtilisateurDAO::ajouter($unUser);
+    /*$unAbo=new abonne('','','','','','','','test');
+    abonneDAO::ajouter($unAbo);*/
 }
 require_once 'vue/vueAbonnement.php' ;
 require_once 'fonctions/formulaire.php';
