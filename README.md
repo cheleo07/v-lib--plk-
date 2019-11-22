@@ -33,6 +33,7 @@ Par défaut, la branche principale est la Master. Ce n'est pas sur celle ci que 
 Pour ne pas foutre en l'air le projet (même si le principe de Git nous assure une certaine sécurité), il faut impérativement vous habituer a suivre la manip suivante (si vous ne comprenez pas ce que je raconte plus bas voici une doc tres complète: https://rogerdudler.github.io/git-guide/).
 ### Récupérer
 Pour récupérer le projet on se positionne dans un répertoire sur votre pc (la ou vous voulez le mettre en gros) dans le CMD puis on fais `git clone <lien_projet>` puis un `cd <nom_projet>` pour y entrer. Tous les fichiers du projet est téléchargé sur votre pc et vous n'avez plus qu'a commencé a coder !
+ATTENTION ! Si une erreur 'it's not a git repertory' c'est une erreur proxy. Tapez: git config --global http.proxy http://172.19.239.245:3128
 
 ### Pousser
 Pousser ou Push, c'est envoyer vos fichier **locaux** sur le répertoire de Git **en ligne**. Vous codez tout simplement sur votre machine en local puis une fois votre partie terminée ou à l'ajout de nouveaux fichiers, vous la poussez sur votre branche !
